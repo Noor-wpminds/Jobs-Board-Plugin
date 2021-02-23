@@ -1,0 +1,58 @@
+.amsselectbox {
+	width: 48%;
+    margin: 1%;
+    float: left;
+}
+
+.ams-search-form, .ams-jobs-archive {
+	background-color: #ccc;
+	padding: 20px;
+	margin: 20px;
+	width: 100%;
+}
+
+.jobs-summary {
+	width: 75%;
+	float: left;
+	padding: 20px;
+}
+
+.ams-feat-image {
+	width: 25%;
+	float: left;
+}
+
+.ams-jobs-archive {
+	float: left;
+}
+
+.ams-archive-post {
+	width: 100%;
+	float: left;
+	padding: 20px;
+	border-bottom: 1px solid black;
+}
+
+.ams-post-meta {
+	font-size: 14px;
+	padding-right: 10px;
+}
+
+.single-ams_jobs .content .entry-header .entry-meta {
+display: none;
+}
+
+.ams-form-input-name {
+	width: 49%;
+	float: left;
+}
+
+.ams-form-input-name1 {
+	width: 49%;
+	float: left;
+	margin-right: 2%;
+}
+
+#export {
+  display:block;
+}
