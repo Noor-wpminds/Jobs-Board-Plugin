@@ -6,11 +6,14 @@ add_action( 'genesis_before_comments', 'ams_jobs_single' );
 
 
 function ams_jobs_single() {
+	global $post;
 	if ( is_single() && get_post_type( $post ) == 'ams_jobs' && !isset($_POST['submit']) ) {
 		//* Remove the entry meta in the entry header (requires HTML5 theme support)
 		remove_action( 'genesis_entry_header', 'genesis_post_info', 5 );
 	echo '<h1 class="entry-title" itemprop="headline">Apply Now:</h1>';
 	echo ams_application_form();
+	// do some stuff
+	//do_action( 'wp_events_registration_form' );  
 }
 
 if (isset($_POST['submit'])) {

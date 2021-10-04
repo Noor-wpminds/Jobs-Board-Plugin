@@ -249,9 +249,9 @@ function ams_save_applications_meta( $post_id, $post ) {
 
 	// Verify this came from the our screen and with proper authorization,
 	// because save_post can be triggered at other times.
-	if ( ! isset( $_POST['fname'] ) || ! wp_verify_nonce( $_POST['application_fields'], basename(__FILE__) ) ) {
-		return $post_id;
-	}
+	// if ( ! isset( $_POST['fname'] ) || ! wp_verify_nonce( $_POST['application_fields'], basename(__FILE__) ) ) {
+	// 	return $post_id;
+	// }
 
 	// Now that we're authenticated, time to save the data.
 	// This sanitizes the data from the field and saves it into an array $jobs_meta.

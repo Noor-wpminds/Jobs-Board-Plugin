@@ -25,7 +25,7 @@ if ( $ams_jobs->have_posts() ) {
         $terms = get_the_terms( get_the_ID(), 'ams_job_category' );
 		//$jobcategory = array();
  
-		$feat_image = get_the_post_thumbnail( $_post->ID, 'thumbnail' );
+		$feat_image = get_the_post_thumbnail( get_the_ID(), 'thumbnail' );
 		$output .= '<div class = "ams-archive-post">
 		<div class = "ams-feat-image">';
 		$output .= $feat_image;
@@ -57,9 +57,9 @@ $location = "";
 $job_category = "";
 $salary = "";
 
-$location = esc_textarea ($_GET["location"]);
-$job_category = esc_textarea($_GET["job_category"]);
-$salary = esc_textarea($_GET["salary"]);
+$location = isset($_GET["location"]) ? esc_textarea($_GET["location"]) : '';
+$job_category = isset($_GET["job_category"]) ? esc_textarea($_GET["job_category"]) : '';
+$salary = isset($_GET["salary"]) ? esc_textarea($_GET["salary"]) : '';
 	
 	$jobs_args = array( 
 		'post_type' => 'ams_jobs',
